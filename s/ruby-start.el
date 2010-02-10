@@ -22,7 +22,7 @@
     (font-lock-mode t)
     (setq standard-indent 2)
     (predictive-mode t)
-    (ruby-electric-mode t)
+    ;; (ruby-electric-mode t)
     (rake-mode t)
     (define-key ruby-mode-map "\C-c\C-l" 'ruby-eval-buffer))
 

@@ -101,7 +101,7 @@
       (require 'color-theme)
       (color-theme-initialize)
       (color-theme-charcoal-black)
-      (set-cursor-color "grey50")))
+      (set-cursor-color "grey35")))
 
 (set-default-font "-apple-consolas-medium-r-normal--0-0-0-0-m-0-mac-roman")
 ;(set-default-font "-apple-andale mono-medium-r-normal--0-0-0-0-m-0-mac-roman")

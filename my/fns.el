@@ -57,7 +57,9 @@
  	(set-buffer-modified-p nil)
  	t))))
 
-(defun word-count nil "Count words in buffer" (interactive)
-  (shell-command-on-region (point-min) (point-max) "wc"))
+(defun wc (&optional b e) 
+  "Count words in buffer" 
+  (interactive "r")
+  (shell-command-on-region b e "wc"))
 
 (global-set-key (kbd "C-x 4 r") 'rotate-windows)

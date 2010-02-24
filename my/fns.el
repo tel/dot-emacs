@@ -60,6 +60,6 @@
 (defun wc (&optional b e) 
   "Count words in buffer" 
   (interactive "r")
-  (shell-command-on-region b e "wc"))
+  (shell-command-on-region b e "wc -w"))
 
 (global-set-key (kbd "C-x 4 r") 'rotate-windows)

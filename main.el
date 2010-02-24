@@ -90,6 +90,7 @@
 (require 'ido-start)
 (require 'server-start)
 (require 'git-start)
+(require 'dict-start)
 (require 'l-start) ;; various language modes
 
 ;; Change fonts and colors when in a windowed system

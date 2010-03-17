@@ -3,3 +3,7 @@
 .DS_Store
 f/*
 l/*
+elpa/*
+url/cookies
+tramp
+.org-id-locations

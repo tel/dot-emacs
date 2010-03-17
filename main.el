@@ -4,10 +4,10 @@
 (defvar emacs-root 
   (let ((linux-systems (list 'cygwin 'gnu/linux 'linux)))
     (cond ((find system-type linux-systems)
-	   "/home/tel/emacs/")
+	   "/home/tel/.emacs.d/")
 	  ((eq system-type 'darwin)
-	   "/Users/tel/emacs/")
-	  (t "c:/home/tel/emacs/")))
+	   "/Users/tel/.emacs.d/")
+	  (t "c:/home/tel/.emacs.d/")))
   "Emacs customization all lives here")
 
 ;; UTF-8
@@ -108,7 +108,7 @@
 ;(set-default-font "-apple-andale mono-medium-r-normal--0-0-0-0-m-0-mac-roman")
 
 ;; Eliminate custom-file mess
-(setq custom-file "~/emacs/custom.el")
+(setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
 
 ;; Kill that annoying splash

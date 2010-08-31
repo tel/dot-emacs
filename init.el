@@ -80,8 +80,6 @@
 ;;
 (load "tweaks")
 (load "fns")
-(load "frame")
-(load "tramp-start")
 (load "org-start")
 
 ;; Initialize Packages

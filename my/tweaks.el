@@ -10,6 +10,9 @@
 (global-set-key "\C-x\C-k" 'kill-region)
 (global-set-key "\C-c\C-k" 'kill-region)
 
+;; Make VI mode accessible
+(global-set-key (kbd "C-\\") 'vi-mode)
+
 (defmacro make-region-indent-completion-function (completion-command &optional indent-command)
   (let ((mark-active (if (boundp mark-active) 'mark-active 'zmacs-region-active-p))
 	(indent (or indent-command '(indent-for-tab-command))))

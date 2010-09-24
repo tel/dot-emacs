@@ -10,6 +10,9 @@
 	  (t "c:/home/tel/.emacs.d/")))
   "Emacs customization all lives here")
 
+(setq x-select-enable-clipboard t)
+(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+
 ;; UTF-8
 (require 'un-define "un-define" t)
 (set-buffer-file-coding-system 'utf-8 'utf-8-unix)
@@ -82,6 +85,13 @@
 (load "fns")
 (load "org-start")
 
+;; Initialize ELPA
+;;
+(when
+    (load
+     (expand-file-name "~/.emacs.d/elpa/package.el"))
+  (package-initialize))
+
 ;; Initialize Packages
 ;;
 (require 'predictive-start)
@@ -94,16 +104,15 @@
 ;; Change fonts and colors when in a windowed system
 ;;
 (turn-on-font-lock)
-(if window-system
-    (progn 
-      (add-paths-with ap (ap "f/color-theme"))
-      (require 'color-theme)
-      (color-theme-initialize)
-      (color-theme-charcoal-black)
-      (set-cursor-color "grey35")))
+(add-paths-with ap (ap "f/color-theme"))
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-charcoal-black)
+(set-cursor-color "grey35")
 
-(set-default-font "-apple-consolas-medium-r-normal--0-0-0-0-m-0-mac-roman")
+;(set-default-font "-apple-consolas-medium-r-normal--0-0-0-0-m-0-mac-roman")
 ;(set-default-font "-apple-andale mono-medium-r-normal--0-0-0-0-m-0-mac-roman")
+(set-frame-font "-unknown-Inconsolata-normal-normal-normal-*-15-*-*-m-0-iso10646-1")
 
 ;; Eliminate custom-file mess
 (setq custom-file "~/.emacs.d/custom.el")
@@ -113,16 +122,6 @@
 ;;
 (setq inhibit-splash-screen t)
 
-;;; This was installed by package-install.el.
-;;; This provides support for the package system and
-;;; interfacing with ELPA, the package archive.
-;;; Move this code earlier if you want to reference
-;;; packages in your .emacs.
-
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))
 
 ;; Welcome to Emacs.
 ;;
